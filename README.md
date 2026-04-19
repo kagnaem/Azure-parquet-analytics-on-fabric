@@ -159,8 +159,8 @@ Add your final screenshots in this section or in a `screenshots/` folder:
 
 Example markdown after you add images:
 ```md
-![Operational Summary](screenshots/overview.png)
-![Forecast Dashboard](screenshots/forecast.png)
+![Operational Summary](screenshots/overview-dashboard.png)
+![Forecast Dashboard](screenshots/forecast-dashboard.png)
 ```
 
 ## Dashboard Summary
@@ -176,7 +176,7 @@ The `docs/index.html` page now links to the exported PDF dashboard summary so vi
 This project now includes an exported PDF dashboard summary so the reporting output remains accessible even if a live Power BI embed expires.
 
 ### Dashboard PDF
-[View the dashboard summary PDF](docs/Quick%20summary%20NYC%20Taxi.pdf)
+[View the dashboard summary PDF](./Quick%20summary%20NYC%20Taxi.pdf)
 
 Why this approach is useful:
 - the dashboard remains viewable directly from the repository

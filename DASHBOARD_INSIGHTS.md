@@ -7,6 +7,9 @@ The reporting output is organized into two dashboard pages:
 - **6-Month Operational Summary**
 - **Trips and Revenue Forecast**
 
+## Dashboard Asset
+[Open the exported dashboard PDF](./Quick%20summary%20NYC%20Taxi.pdf)
+
 ## Dashboard Screenshots
 Add the final screenshots to a `screenshots/` folder in the repository and reference them here.
 
