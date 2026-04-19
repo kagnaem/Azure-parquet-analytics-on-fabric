@@ -45,28 +45,44 @@ That scale matters because it:
 The project follows a Bronze -> Silver -> Gold architecture.
 
 ```mermaid
-flowchart LR
-    A[Azure Open Datasets
-NYC yellow taxi trip records] --> B[Azure Blob Storage
-Raw monthly parquet files]
-    B --> C[Fabric Data Pipeline
-Ingestion into Lakehouse]
-    C --> D[Bronze Layer
-nyc-taxi-raw]
-    D --> E[Fabric Notebook
-PySpark cleaning and feature engineering]
-    E --> F[Silver Layer
-silver_trips_clean]
-    F --> G[Dataflow Gen2
-Business-friendly shaping]
-    G --> H[Gold Layer
-gold_trips_report]
-    H --> I[Semantic Model
-taxi_gold_semantic_model]
-    I --> J[Power BI Dashboard
-Overview + Forecast]
-    J --> K[Insights and Reporting
-Business interpretation]
+flowchart TB
+    A[Azure Open Datasets<br/>NYC yellow taxi trips] --> B[Azure Blob Storage<br/>Raw parquet files]
+    B --> C[Fabric Data Pipeline<br/>Ingest to Lakehouse]
+
+    subgraph Bronze[Bronze Layer]
+        D[nyc-taxi-raw]
+    end
+
+    subgraph Silver[Silver Layer]
+        E[Fabric Notebook<br/>PySpark cleaning + features]
+        F[silver_trips_clean]
+    end
+
+    subgraph Gold[Gold Layer]
+        G[Dataflow Gen2<br/>Business shaping]
+        H[gold_trips_report]
+    end
+
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I[Semantic Model<br/>taxi_gold_semantic_model]
+    I --> J[Power BI Dashboard<br/>Overview + Forecast]
+    J --> K[Insights<br/>Reporting + forecasting]
+
+    classDef source fill:#e0f2fe,stroke:#0284c7,color:#0f172a,stroke-width:1px;
+    classDef bronze fill:#fef3c7,stroke:#d97706,color:#451a03,stroke-width:1px;
+    classDef silver fill:#e0f2fe,stroke:#2563eb,color:#172554,stroke-width:1px;
+    classDef gold fill:#dcfce7,stroke:#16a34a,color:#052e16,stroke-width:1px;
+    classDef report fill:#f3e8ff,stroke:#9333ea,color:#3b0764,stroke-width:1px;
+
+    class A,B,C source;
+    class D bronze;
+    class E,F silver;
+    class G,H gold;
+    class I,J,K report;
 ```
 
 ## Medallion Design
