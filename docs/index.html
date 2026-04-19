@@ -20,7 +20,7 @@
       color: var(--text);
     }
     .wrap {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 32px 20px 48px;
     }
@@ -30,7 +30,7 @@
     }
     .subtitle {
       color: var(--muted);
-      margin-bottom: 28px;
+      margin-bottom: 18px;
       font-size: 17px;
     }
     .panel {
@@ -59,17 +59,20 @@
       font-size: 28px;
       font-weight: 700;
     }
-    .embed {
-      width: 100%;
-      min-height: 720px;
-      border: 0;
-      border-radius: 12px;
-      background: #242424;
-    }
     .note {
       color: var(--muted);
       font-size: 14px;
       line-height: 1.6;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: var(--blue);
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 700;
     }
     .accent-blue { color: var(--blue); }
     .accent-amber { color: var(--amber); }
@@ -97,19 +100,14 @@
     </div>
 
     <div class="panel">
-      <h2>Interactive Dashboard</h2>
-      <p class="note">Replace the iframe <code>src</code> below with your Power BI Publish-to-web link if you want to make the dashboard publicly interactive.</p>
-      <iframe
-        class="embed"
-        title="NYC Taxi Dashboard"
-        src="PASTE_YOUR_POWER_BI_PUBLISH_TO_WEB_URL_HERE"
-        allowfullscreen="true">
-      </iframe>
+      <h2>Dashboard Summary</h2>
+      <p class="note">Open the exported PDF dashboard summary to review the final operational summary and forecast pages. This version is stable and does not depend on a live Power BI embed.</p>
+      <a class="button" href="Quick%20summary%20NYC%20Taxi.pdf" target="_blank">Open Dashboard PDF</a>
     </div>
 
     <div class="panel">
       <h2>About This Project</h2>
-      <p class="note">This page is intended for GitHub Pages. If your Fabric or Power BI trial expires, the embedded dashboard may stop working. Keep dashboard screenshots and written insights in the repository so the project remains valuable even without the live embed.</p>
+      <p class="note">This project uses Azure Open Datasets, Azure Blob Storage, Microsoft Fabric, Lakehouse, Notebook transformations, Dataflow Gen2, and Power BI to build a large-scale NYC taxi analytics workflow. The exported PDF summary is included so the reporting output remains available even if a Fabric or Power BI trial expires.</p>
     </div>
   </div>
 </body>

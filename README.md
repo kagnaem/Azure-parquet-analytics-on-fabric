@@ -163,7 +163,7 @@ Example markdown after you add images:
 ![Forecast Dashboard](screenshots/forecast.png)
 ```
 
-## Live Dashboard
+## Dashboard Summary
 ## GitHub Pages Dashboard
 Once GitHub Pages is enabled for this repository, the project page can be viewed at:
 
@@ -171,24 +171,17 @@ Once GitHub Pages is enabled for this repository, the project page can be viewed
 https://kagnaem.github.io/Azure-parquet-analytics-on-fabric/
 ```
 
-The `docs/index.html` page is already prepared for a Power BI embed. Replace the iframe source with your Power BI Publish-to-web URL to make the dashboard interactive on GitHub Pages.
+The `docs/index.html` page now links to the exported PDF dashboard summary so visitors can open a stable version of the final report directly from GitHub Pages.
 
-### Option 1: Link from README
-Add a public link here if your Power BI report is shared publicly:
+This project now includes an exported PDF dashboard summary so the reporting output remains accessible even if a live Power BI embed expires.
 
-```md
-[View the interactive dashboard](PASTE_YOUR_POWER_BI_PUBLIC_LINK_HERE)
-```
+### Dashboard PDF
+[View the dashboard summary PDF](docs/Quick%20summary%20NYC%20Taxi.pdf)
 
-### Option 2: Embed in GitHub Pages
-This repository includes a `docs/index.html` file that can be used with **GitHub Pages** to embed the dashboard.
-
-Important note:
-- `Publish to web` in Power BI makes the dashboard public on the internet.
-- Only use it if the dataset is safe to expose publicly.
-- If your Power BI or Fabric trial expires, the live embedded report may stop working.
-
-Because of that, the GitHub repo should always include screenshots and written insights even if the live dashboard is embedded.
+Why this approach is useful:
+- the dashboard remains viewable directly from the repository
+- the project does not depend on a live Fabric or Power BI trial
+- GitHub visitors can quickly review the final reporting output alongside the notebook and README
 
 ## Repository Structure
 ```text
