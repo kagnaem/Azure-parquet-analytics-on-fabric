@@ -7,6 +7,11 @@ The solution ingests **NYC Taxi & Limousine Commission yellow taxi trip records*
 
 The current project slice processes **6 months of 2019 data** and scales to **more than 52 million trip records**, making it a realistic large-data portfolio project rather than a toy sample.
 
+## Quick Links
+- [Project notebook](./NYC_Taxi_Project.ipynb)
+- [Dashboard insights summary](./DASHBOARD_INSIGHTS.md)
+- [Dashboard PDF](./Quick%20summary%20NYC%20Taxi.pdf)
+
 ## Dataset Source
 The dataset comes from **Azure Open Datasets** and contains NYC yellow taxi trip records. Microsoft describes the dataset as including:
 - pickup and dropoff timestamps
@@ -149,22 +154,17 @@ One important challenge in the project was ingestion quality:
 
 This was an important part of the project because it demonstrated troubleshooting, validation, and data engineering quality control rather than only report building.
 
-## Screenshots To Add
-Add your final screenshots in this section or in a `screenshots/` folder:
-- overview dashboard
-- forecast dashboard
-- Fabric pipeline
-- Lakehouse tables
-- notebook transformation steps
-
-Example markdown after you add images:
-```md
+## Dashboard Screenshots
+### Operational Summary
 ![Operational Summary](screenshots/overview-dashboard.jpg)
+
+### Trips and Revenue Forecast
 ![Forecast Dashboard](screenshots/forecast-dashboard.jpg)
-```
 
 ## Dashboard Summary
-## GitHub Pages Dashboard
+This project includes an exported PDF dashboard summary so the reporting output remains accessible even if a live Fabric or Power BI session is unavailable.
+
+### GitHub Pages Dashboard
 Once GitHub Pages is enabled for this repository, the project page can be viewed at:
 
 ```text
@@ -188,10 +188,15 @@ Why this approach is useful:
 NYC_Taxi/
 ??? NYC_Taxi_Project.ipynb
 ??? DASHBOARD_INSIGHTS.md
+??? Quick summary NYC Taxi.pdf
 ??? README.md
 ??? docs/
-    ??? index.html
-    ??? Quick summary NYC Taxi.pdf
+?   ??? index.html
+?   ??? Quick summary NYC Taxi.pdf
+??? screenshots/
+    ??? overview-dashboard.jpg
+    ??? forecast-dashboard.jpg
+    ??? README.md
 ```
 
 ## Portfolio Value
