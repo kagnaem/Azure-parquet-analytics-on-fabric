@@ -148,6 +148,15 @@ Example markdown after you add images:
 ```
 
 ## Live Dashboard
+## GitHub Pages Dashboard
+Once GitHub Pages is enabled for this repository, the project page can be viewed at:
+
+```text
+https://kagnaem.github.io/Azure-parquet-analytics-on-fabric/
+```
+
+The `docs/index.html` page is already prepared for a Power BI embed. Replace the iframe source with your Power BI Publish-to-web URL to make the dashboard interactive on GitHub Pages.
+
 ### Option 1: Link from README
 Add a public link here if your Power BI report is shared publicly:
 
