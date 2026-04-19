@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Yellow Taxi Analytics</title>
+  <style>
+    :root {
+      --bg: #2f2f2f;
+      --panel: #3a3a3a;
+      --text: #f5f5f5;
+      --muted: #d4d4d4;
+      --blue: #76bdfb;
+      --amber: #f6c445;
+    }
+    body {
+      margin: 0;
+      font-family: Segoe UI, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 17px;
+    }
+    .panel {
+      background: var(--panel);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .metric {
+      background: rgba(255,255,255,0.04);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .metric .label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .metric .value {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .embed {
+      width: 100%;
+      min-height: 720px;
+      border: 0;
+      border-radius: 12px;
+      background: #242424;
+    }
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .accent-blue { color: var(--blue); }
+    .accent-amber { color: var(--amber); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>NYC Yellow Taxi Analytics</h1>
+    <div class="subtitle">Azure + Microsoft Fabric + Power BI portfolio project</div>
+
+    <div class="grid">
+      <div class="metric">
+        <div class="label">Dataset Scope</div>
+        <div class="value accent-amber">6 months</div>
+      </div>
+      <div class="metric">
+        <div class="label">Trip Records</div>
+        <div class="value accent-blue">52M+</div>
+      </div>
+      <div class="metric">
+        <div class="label">Layers</div>
+        <div class="value">Bronze ? Silver ? Gold</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Interactive Dashboard</h2>
+      <p class="note">Replace the iframe <code>src</code> below with your Power BI Publish-to-web link if you want to make the dashboard publicly interactive.</p>
+      <iframe
+        class="embed"
+        title="NYC Taxi Dashboard"
+        src="PASTE_YOUR_POWER_BI_EMBED_URL_HERE"
+        allowfullscreen="true">
+      </iframe>
+    </div>
+
+    <div class="panel">
+      <h2>About This Project</h2>
+      <p class="note">This page is intended for GitHub Pages. If your Fabric or Power BI trial expires, the embedded dashboard may stop working. Keep dashboard screenshots and written insights in the repository so the project remains valuable even without the live embed.</p>
+    </div>
+  </div>
+</body>
+</html>
