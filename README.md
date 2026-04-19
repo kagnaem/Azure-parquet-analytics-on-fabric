@@ -159,8 +159,8 @@ Add your final screenshots in this section or in a `screenshots/` folder:
 
 Example markdown after you add images:
 ```md
-![Operational Summary](screenshots/overview-dashboard.png)
-![Forecast Dashboard](screenshots/forecast-dashboard.png)
+![Operational Summary](screenshots/overview-dashboard.jpg)
+![Forecast Dashboard](screenshots/forecast-dashboard.jpg)
 ```
 
 ## Dashboard Summary

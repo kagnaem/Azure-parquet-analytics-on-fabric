@@ -2,5 +2,5 @@
 
 Add the final exported dashboard page screenshots here. Recommended filenames:
 
-- `overview-dashboard.png`
-- `forecast-dashboard.png`
+- `overview-dashboard.jpg`
+- `forecast-dashboard.jpg`
