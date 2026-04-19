@@ -13,10 +13,8 @@ The reporting output is organized into two dashboard pages:
 ## Dashboard Screenshots
 Add the final screenshots to a `screenshots/` folder in the repository and reference them here.
 
-```md
 ![6-Month Operational Summary](screenshots/overview-dashboard.png)
 ![Trips and Revenue Forecast](screenshots/forecast-dashboard.png)
-```
 
 ## Headline KPI Figures
 - **Total Revenue:** 931,794,015.82
