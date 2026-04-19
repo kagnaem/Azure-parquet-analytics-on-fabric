@@ -187,9 +187,11 @@ Why this approach is useful:
 ```text
 NYC_Taxi/
 ??? NYC_Taxi_Project.ipynb
+??? DASHBOARD_INSIGHTS.md
 ??? README.md
 ??? docs/
     ??? index.html
+    ??? Quick summary NYC Taxi.pdf
 ```
 
 ## Portfolio Value
