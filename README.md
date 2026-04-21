@@ -1,16 +1,21 @@
 # NYC Yellow Taxi Analytics on Azure, Microsoft Fabric, and Power BI
 
-## Project Summary
+<div align="center">
+
+### Large-scale cloud analytics project built on Azure Open Datasets, Parquet, Microsoft Fabric, and Power BI
+
+[Project Notebook](./NYC_Taxi_Project.ipynb) ? [Dashboard Insights](./DASHBOARD_INSIGHTS.md) ? [Dashboard PDF](./Quick%20summary%20NYC%20Taxi.pdf)
+
+</div>
+
+## Project Overview
 This project builds an end-to-end analytics workflow using **Azure Blob Storage**, **Microsoft Fabric**, **Lakehouse**, **PySpark Notebook**, **Dataflow Gen2**, **Power BI**, and **GitHub**.
 
 The solution ingests **NYC Taxi & Limousine Commission yellow taxi trip records** from **Azure Open Datasets**, transforms the raw data into curated reporting layers, and delivers dashboard insights plus short-term forecasting.
 
-The current project slice processes **6 months of 2019 data** and scales to **more than 52 million trip records**, making it a realistic large-data portfolio project rather than a toy sample.
+The current project slice covers **6 months of 2019 data** and scales to **more than 52 million trip records**, making it a realistic large-data portfolio project rather than a toy sample.
 
-## Quick Links
-- [Project notebook](./NYC_Taxi_Project.ipynb)
-- [Dashboard insights summary](./DASHBOARD_INSIGHTS.md)
-- [Dashboard PDF](./Quick%20summary%20NYC%20Taxi.pdf)
+> This project is designed to show both **data engineering workflow** and **business-facing reporting**: ingestion, transformation, modeling, dashboarding, and forecasting.
 
 ## Dataset Source
 The dataset comes from **Azure Open Datasets** and contains NYC yellow taxi trip records. Microsoft describes the dataset as including:
@@ -21,13 +26,13 @@ The dataset comes from **Azure Open Datasets** and contains NYC yellow taxi trip
 - payment type
 - passenger count
 
-Why this dataset is significant:
-- It is large enough to demonstrate realistic data engineering and reporting workflows.
-- It supports daily, weekly, and monthly trend analysis.
-- It is suitable for KPI tracking, demand analysis, payment behavior analysis, and short-term forecasting.
+Why this dataset matters:
+- it is large enough to demonstrate realistic data engineering and reporting workflows
+- it supports daily, weekly, and monthly trend analysis
+- it is suitable for KPI tracking, payment behavior analysis, and short-term forecasting
 
-## Why The Dataset Is Large
-This dataset is large because each row represents a single taxi trip, and New York City generates an extremely high number of trips every day. When trip-level data is retained across multiple months, the number of rows grows quickly into the tens of millions.
+## Why the Dataset Is Large
+Each row represents a single taxi trip, and New York City generates a very high number of trips every day. When that trip-level detail is retained across multiple months, the row count grows rapidly into the tens of millions.
 
 That scale matters because it:
 - reduces small-sample noise
@@ -116,8 +121,8 @@ Created in Dataflow Gen2:
 - cleaner display fields for Power BI
 - final table used by semantic model and dashboards
 
-## Dashboard Pages
-### 1. Operational Summary
+## Dashboard Overview
+### Operational Summary
 The overview dashboard focuses on:
 - total revenue
 - total trips
@@ -128,7 +133,7 @@ The overview dashboard focuses on:
 - revenue by payment type
 - trips by payment type
 
-### 2. Trips and Revenue Forecast
+### Trips and Revenue Forecast
 The forecasting page focuses on:
 - short-term trip forecast
 - short-term revenue forecast
@@ -152,17 +157,20 @@ One important challenge in the project was ingestion quality:
 - the ingestion process was corrected by loading complete monthly partition files
 - the final dataset scaled to more than 52 million rows
 
-This was an important part of the project because it demonstrated troubleshooting, validation, and data engineering quality control rather than only report building.
-
-## Dashboard Screenshots
-### Operational Summary
-![Operational Summary](screenshots/overview-dashboard.jpg)
-
-### Trips and Revenue Forecast
-![Forecast Dashboard](screenshots/forecast-dashboard.jpg)
+This part of the project demonstrates troubleshooting, validation, and data engineering quality control rather than only report building.
 
 ## Dashboard Summary
-This project includes an exported PDF dashboard summary so the reporting output remains accessible even if a live Fabric or Power BI session is unavailable.
+This repository includes an exported PDF dashboard summary so the reporting output remains accessible even if a live Fabric or Power BI session is unavailable.
+
+### Dashboard Screenshots
+#### Operational Summary
+![Operational Summary](screenshots/overview-dashboard.jpg)
+
+#### Trips and Revenue Forecast
+![Forecast Dashboard](screenshots/forecast-dashboard.jpg)
+
+### Dashboard PDF
+[View the dashboard summary PDF](./Quick%20summary%20NYC%20Taxi.pdf)
 
 ### GitHub Pages Dashboard
 Once GitHub Pages is enabled for this repository, the project page can be viewed at:
@@ -171,17 +179,7 @@ Once GitHub Pages is enabled for this repository, the project page can be viewed
 https://kagnaem.github.io/Azure-parquet-analytics-on-fabric/
 ```
 
-The `docs/index.html` page now links to the exported PDF dashboard summary so visitors can open a stable version of the final report directly from GitHub Pages.
-
-This project now includes an exported PDF dashboard summary so the reporting output remains accessible even if a live Power BI embed expires.
-
-### Dashboard PDF
-[View the dashboard summary PDF](./Quick%20summary%20NYC%20Taxi.pdf)
-
-Why this approach is useful:
-- the dashboard remains viewable directly from the repository
-- the project does not depend on a live Fabric or Power BI trial
-- GitHub visitors can quickly review the final reporting output alongside the notebook and README
+The `docs/index.html` page links to the exported PDF dashboard summary so visitors can open a stable version of the final report directly from GitHub Pages.
 
 ## Repository Structure
 ```text
